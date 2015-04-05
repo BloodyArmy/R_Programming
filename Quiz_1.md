@@ -61,4 +61,37 @@
 	> x + y
 	[1] 3 4 5 6
 
-	
+##10. Suppose I have vector x <- c(3, 5, 1, 10, 12, 6) and I want to set all elements of this vector that are less than 6 to be equal to zero. What R code achieves this? 
+
+**x[x <= 5] <- 0**
+
+	You can create a logical vector with the expression x < 6 or x <= 5 and then use the [ operator to subset the original vector x.
+	> x <- c(3, 5, 1, 10, 12, 6)
+	> x[x <= 5] <- 0
+	> x
+	[1] 0 0 0 10 12 6
+
+##11. In the dataset provided for this Quiz, what are the column names of the dataset?
+
+**Ozone, Solar.R, Wind, Temp, Month, Day**
+
+	You can get the column names of a data frame with the ‘names()’ function.
+	> hw1 = read.csv("hw1_data.csv")
+	> names(hw1)
+	[1] "Ozone" "Solar.R" "Wind" "Temp" "Month" "Day"
+
+##12. Extract the first 2 rows of the data frame and print them to the console. What does the output look like?
+
+ |Ozone|Solar.R|Wind|Temp|Month|Day
+ -|-----|-------|----|----|-----|---
+ 1| 41 | 190 | 7.4 | 67 | 5 | 1
+ 2| 36 | 118 | 8.0 | 72 | 5 | 2
+
+	You can extract the first two rows using the [ operator and an integer sequence to index the rows.
+	> hw1 = read.csv("hw1_data.csv")
+	> hw1[c(1,2),]
+	Ozone Solar.R Wind Temp Month Day
+	1 41 190 7.4 67 5 1
+	2 36 118 8.0 72 5 2
+
+
