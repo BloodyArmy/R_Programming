@@ -4,7 +4,7 @@
 
 **The University of Auckland**
 
-	*The R language was developed by Ross Ihaka and Robert Gentleman who were statisticians at the University of Auckland in New Zealand.*
+	_The R language was developed by Ross Ihaka and Robert Gentleman who were statisticians at the University of Auckland in New Zealand._
 
 ###2. The definition of free software consists of four freedoms (freedoms 0 through 3). Which of the following is NOT one of the freedoms that are part of the definition?
 
