@@ -34,12 +34,6 @@
 
 	*The 'rbind' function treats vectors as if they were rows of a matrix. It then takes those vectors and binds them together row-wise to create a matrix.*
 
-###6. If I have two vectors x <- c(1,3,5) and y <- c(3,2,10), what is produced by the expression rbind(x,y)?
-
-**a matrix with two rows and three columns**
-
-	*The 'rbind' function treats vectors as if they were rows of a matrix. It then takes those vectors and binds them together row-wise to create a matrix.*
-
 ###7. A key property of vectors in R is that
 
 **elements of a vector all must be of the same class**
