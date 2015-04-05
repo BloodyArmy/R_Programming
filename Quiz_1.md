@@ -91,6 +91,14 @@
  2 | 36 | 118 | 8.0 | 72 | 5 | 2
 
 
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+
+
 	You can extract the first two rows using the [ operator and an integer sequence to index the rows.
 	> hw1 = read.csv("hw1_data.csv")
 	> hw1[c(1,2),]
