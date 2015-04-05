@@ -1,4 +1,4 @@
-#R_Programming\Quiz_1.md
+#R_Programming/Quiz_1.md
 
 ##1. R was developed by statisticians working at
 
@@ -12,4 +12,53 @@
 
 	*This is not part of the free software definition. Freedoms 1 and 3 require access to the source code.*
 
-##3. 
+##3. In R, the following are all atomic data types EXCEPT:
+
+**list**
+
+	*'list' is not an atomic data type in R.*
+
+##4. If I execute the expression x <- 4 in R, what is the class of the object 'x' as determined by the 'class()' function?
+
+**numeric**
+
+##5. What is the class of the object defined by the expression x <- c(4, "a", TRUE)?
+
+**character**
+
+	*The character class is the "lowest common denominator" here and so all elements will be coerced into that class. (Note: R does automatic coercion of vectors so that all elements of the vector are the same data class.)*
+
+##6. If I have two vectors x <- c(1,3,5) and y <- c(3,2,10), what is produced by the expression rbind(x,y)?
+
+**a matrix with two rows and three columns**
+
+	*The 'rbind' function treats vectors as if they were rows of a matrix. It then takes those vectors and binds them together row-wise to create a matrix.*
+
+##6. If I have two vectors x <- c(1,3,5) and y <- c(3,2,10), what is produced by the expression rbind(x,y)?
+
+**a matrix with two rows and three columns**
+
+	*The 'rbind' function treats vectors as if they were rows of a matrix. It then takes those vectors and binds them together row-wise to create a matrix.*
+
+##7. A key property of vectors in R is that
+
+**elements of a vector all must be of the same class**
+
+##8. Suppose I have a list defined as x <- list(2, “a”, “b”, TRUE). What does x[[2]] give me?
+
+**a character vector containing the letter “a”. **
+
+	> x <- list(2, "a", "b", TRUE)
+	> x[[2]]
+	[1] "a"
+
+##9. Suppose I have a vector x <- 1:4 and a vector y <- 2. What is produced by the expression x+y? 
+
+**a numeric vector with elements 3, 4, 5, 6**
+
+	> x <- 1:4
+	> y <- 2
+	> x + y
+	[1] 3 4 5 6
+
+	
