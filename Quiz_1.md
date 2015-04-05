@@ -82,22 +82,10 @@
 
 ##12. Extract the first 2 rows of the data frame and print them to the console. What does the output look like?
 
- i | Ozone | Solar.R | Wind | Temp | Month | Day
-
- --|-------|---------|------|------|-------|----
-
- 1 | 41 | 190 | 7.4 | 67 | 5 | 1
-
- 2 | 36 | 118 | 8.0 | 72 | 5 | 2
-
-
-
-| Ozone  | Solar.R  | Wind  | Temp  | Month  | Day  |
-| ------ | -------- | ----- | ----- | ------ | ---- |
-| 41  | 190  | 7.4  | 67  | 5  | 1  |
-| 36  | 118  | 8.0  | 72  | 5  | 2  |
-
-
+|    | Ozone  | Solar.R  | Wind  | Temp  | Month  | Day  |
+| -- | ------ | -------- | ----- | ----- | ------ | ---- |
+| 1  | 41  | 190  | 7.4  | 67  | 5  | 1  |
+| 2  | 36  | 118  | 8.0  | 72  | 5  | 2  |
 
 	You can extract the first two rows using the [ operator and an integer sequence to index the rows.
 	> hw1 = read.csv("hw1_data.csv")
@@ -106,4 +94,87 @@
 	1 41 190 7.4 67 5 1
 	2 36 118 8.0 72 5 2
 
+##13. How many observations (i.e. rows) are in this data frame?
+
+**153**
+
+	You can use the ‘nrow()’ function to compute the number of rows in a data frame.
+	> hw1 = read.csv("hw1_data.csv")
+	> nrow(hw1)
+	[1] 153
+
+##14. Extract the last 2 rows of the data frame and print them to the console. What does the output looks like?
+
+|    | Ozone  | Solar.R  | Wind  | Temp  | Month  | Day  |
+| -- | ------ | -------- | ----- | ----- | ------ | ---- |
+| 152  | 18  | 131  | 8.0  | 76  | 9  | 29  |
+| 153  | 20  | 223  | 11.5  | 68  | 9  | 30  |
+
+	The ‘tail()’ function is an easy way to extract the last few elements of an R object. 
+	> hw1 = read.csv("hw1_data.csv")
+	> tail(hw1,2)
+	Ozone Solar.R Wind Temp Month Day
+	152 18 131 8.0 76 9 29
+	153 20 223 11.5 68 9 30
+
+##15. What is the value of Ozone in the 47th row?
+
+**21**
+
+	> hw1 = read.csv("hw1_data.csv")
+	> hw1[47,]
+	Ozone Solar.R Wind Temp Month Day
+	47 21 191 14.9 77 6 16
+
+##16. How many missing values are in the Ozone column of this data frame?
+
+**37**
+
+	Use the 'is.na()’ function to identify the missing values. 
+	> hw1 = read.csv("hw1_data.csv")
+	> sub = subset(hw1,is.na(Ozone))
+	> nrow(sub)
+	[1] 37
+
+##17. What is the mean of the Ozone column in this dataset? Exclude missing values (coded as NA) from this calculation. 
+
+**42.1**
+
+	Use the ‘mean’ function to calculate the mean.
+	> hw1 = read.csv("hw1_data.csv")
+	> sub = subset(hw1, !is.na(Ozone), select=Ozone)
+	> apply(sub,2,mean)
+	Ozone
+	42.12931
+
+##18. Extract the subset of rows of the data frame where Ozone values are above 31 and Temp values are above 90. What is the mean of Solar.R in this subset?
+
+**212.8**
+
+	Note: You need to construct a logical vector in R to match the question's requirements. Then use that logical vector to subset the data frame.
+	> hw1 = read.csv("hw1_data.csv")
+	> sub = subset(hw1, Ozone > 31 & Temp > 90, select=Solar.R)
+	> apply(sub,2,mean)
+	Solar.R
+	212.8
+
+##19. What is the mean of “Temp” when “Month” is equal to 6?
+
+**79.1**
+
+	> hw1 = read.csv("hw1_data.csv")
+	> sub = subset(hw1, Month == 6, select=Temp)
+	> apply(sub,2,mean)
+	Temp
+	79.1
+
+##20. What is the maximum ozone value in the month of May (i.e. Month = 5)?
+
+**115**
+
+	> hw1 = read.csv("hw1_data.csv")
+	> sub = subset(hw1, Month == 5 & !is.na(Ozone), select=Ozone)
+	> apply(sub,2,max)
+	Ozone
+	115
 
