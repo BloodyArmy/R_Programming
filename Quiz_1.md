@@ -99,8 +99,8 @@
 
 ###14. Extract the last 2 rows of the data frame and print them to the console. What does the output looks like?
 
-| #  | Ozone  | Solar.R  | Wind  | Temp  | Month  | Day  |
-| -- | ------ | -------- | ----- | ----- | ------ | ---- |
+|row#  | Ozone  | Solar.R  | Wind  | Temp  | Month  | Day  |
+|----- | ------ | -------- | ----- | ----- | ------ | ---- |
 | 152  | 18  | 131  | 8.0  | 76  | 9  | 29  |
 | 153  | 20  | 223  | 11.5  | 68  | 9  | 30  |
 
