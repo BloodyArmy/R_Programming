@@ -46,7 +46,7 @@
 
 ###8. Suppose I have a list defined as x <- list(2, “a”, “b”, TRUE). What does x[[2]] give me?
 
-**a character vector containing the letter “a”. **
+**a character vector containing the letter “a”**
 
 	> x <- list(2, "a", "b", TRUE)
 	> x[[2]]
