@@ -4,19 +4,19 @@
 
 **The University of Auckland**
 
-	_The R language was developed by Ross Ihaka and Robert Gentleman who were statisticians at the University of Auckland in New Zealand._
+	The R language was developed by Ross Ihaka and Robert Gentleman who were statisticians at the University of Auckland in New Zealand.
 
 ###2. The definition of free software consists of four freedoms (freedoms 0 through 3). Which of the following is NOT one of the freedoms that are part of the definition?
 
 **The freedom to restrict access to the source code for the software**
 
-	*This is not part of the free software definition. Freedoms 1 and 3 require access to the source code.*
+	This is not part of the free software definition. Freedoms 1 and 3 require access to the source code.
 
 ###3. In R, the following are all atomic data types EXCEPT:
 
 **list**
 
-	*'list' is not an atomic data type in R.*
+	'list' is not an atomic data type in R.
 
 ###4. If I execute the expression x <- 4 in R, what is the class of the object 'x' as determined by the 'class()' function?
 
@@ -26,13 +26,13 @@
 
 **character**
 
-	*The character class is the "lowest common denominator" here and so all elements will be coerced into that class. (Note: R does automatic coercion of vectors so that all elements of the vector are the same data class.)*
+	The character class is the "lowest common denominator" here and so all elements will be coerced into that class. (Note: R does automatic coercion of vectors so that all elements of the vector are the same data class.)
 
 ###6. If I have two vectors x <- c(1,3,5) and y <- c(3,2,10), what is produced by the expression rbind(x,y)?
 
 **a matrix with two rows and three columns**
 
-	*The 'rbind' function treats vectors as if they were rows of a matrix. It then takes those vectors and binds them together row-wise to create a matrix.*
+	The 'rbind' function treats vectors as if they were rows of a matrix. It then takes those vectors and binds them together row-wise to create a matrix.
 
 ###7. A key property of vectors in R is that
 
