@@ -22,11 +22,23 @@
 
 **numeric**
 
+###4.1 If I execute the expression x <- 4L in R, what is the class of the object 'x' as determined by the 'class()' function?
+
+**integer**
+
+	The 'L' suffix creates an integer vector as opposed to a numeric vector. 
+
 ###5. What is the class of the object defined by the expression x <- c(4, "a", TRUE)?
 
 **character**
 
 	The character class is the "lowest common denominator" here and so all elements will be coerced into that class. (Note: R does automatic coercion of vectors so that all elements of the vector are the same data class.)
+
+###5.1 What is the class of the object defined by x <- c(4, TRUE)?
+
+**numeric**
+
+	The numeric class is the "lowest common denominator" here and so all elements will be coerced into that class. (Note: R does automatic coercion of vectors so that all elements of the vector are the same data class.)
 
 ###6. If I have two vectors x <- c(1,3,5) and y <- c(3,2,10), what is produced by the expression rbind(x,y)?
 
@@ -55,6 +67,10 @@
 	> x + y
 	[1] 3 4 5 6
 
+###9.1 Suppose I have a vector x <- 1:4 and a vector y <- 2:3. What is produced by the expression x+y? 
+
+**an integer vector with the values 3,5,5,7**
+
 ###10. Suppose I have vector x <- c(3, 5, 1, 10, 12, 6) and I want to set all elements of this vector that are less than 6 to be equal to zero. What R code achieves this? 
 
 **x[x <= 5] <- 0**
@@ -64,6 +80,10 @@
 	> x[x <= 5] <- 0
 	> x
 	[1] 0 0 0 10 12 6
+
+###10.1 Suppose I have a vector x <- c(17, 14, 4, 5, 13, 12, 10) and I want to set all elements of this vector that are greater than 10 to be equal to 4. What R code achieves this?
+
+**x[x >= 11] <- 4**
 
 ###11. In the dataset provided for this Quiz, what are the column names of the dataset?
 
